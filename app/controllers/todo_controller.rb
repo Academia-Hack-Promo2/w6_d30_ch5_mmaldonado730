@@ -1,17 +1,17 @@
 class TodoController < ApplicationController
 	def index
     users = User.all
-	  render json: user
+	  render json: users
 	end
 
 	def create
-    user = User.new
-		user.save
+    users = User.new
+		users.save
 	end
 
 	def show
     users = User.find(params[id:].to_i)
-    render json: user
+    render json: users
 	end
 
 	def update
