@@ -5,7 +5,7 @@ class TodoController < ApplicationController
 	end
 
 	def create
-    users = User.new
+    users = User.new(:text, :done)
 		users.save
 	end
 
